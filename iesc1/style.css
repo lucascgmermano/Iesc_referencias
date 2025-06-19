@@ -70,6 +70,7 @@ main {
   .container {
     flex-direction: column; /* Sidebar sobe e vira barra acima do main */
   }
+}
 
 footer {
     text-align: center; 
