@@ -1,39 +1,43 @@
-/* Estilos gerais */
+/* 🎯 Estilos gerais para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    margin: 0;                      /* Remove margem externa */
+    padding: 0;                     /* Remove preenchimento externo */
+    background-color: #f4f4f4;      /* Cor de fundo cinza-claro */
 }
 
+/* 🎯 Estilo do cabeçalho (header) */
 header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #007bff;      /* Azul intenso */
+    color: white;                   /* Texto branco */
+    text-align: center;             /* Centraliza o texto */
+    padding: 20px;                  /* Espaçamento interno */
 }
 
+/* 🎯 Barra de navegação superior */
 .top-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #0056b3;
-    padding: 10px;
+    display: flex;                  /* Flexbox para alinhar itens na horizontal */
+    justify-content: center;        /* Centraliza os links */
+    background-color: #0056b3;      /* Azul mais escuro que o header */
+    padding: 10px;                  /* Espaçamento interno */
 }
 
+/* 🎯 Estilo dos links na navegação */
 .top-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    background-color: #007bff;
-    border-radius: 5px;
+    color: white;                   /* Texto branco */
+    text-decoration: none;          /* Remove sublinhado dos links */
+    padding: 10px 20px;             /* Espaçamento interno (vertical, horizontal) */
+    margin: 0 5px;                  /* Margem horizontal entre os links */
+    background-color: #007bff;      /* Fundo azul */
+    border-radius: 5px;             /* Bordas arredondadas */
 }
 
+/* 🎯 Efeito hover nos links */
 .top-nav a:hover {
-    background-color: #0056b3;
+    background-color: #0056b3;      /* Fica mais escuro ao passar o mouse */
 }
 
-/* 🔥 Botão para abrir/fechar menu */
+/* 🎯 Botão menu (hambúrguer) - padrão escondido no desktop */
 .menu-toggle {
     background-color: #007bff;
     color: white;
@@ -41,18 +45,13 @@ header {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    display: none; /* por padrão escondido no desktop */
+    display: none;                  /* 🔥 Escondido no desktop */
 }
 
-/* 🔥 Esconde o botão no desktop */
-.menu-toggle {
-    display: none;
-}
-
-/* 🔥 Exibe o botão apenas no mobile */
+/* 🔥 Exibir botão menu no mobile */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: block;             /* Ativo no mobile */
         width: 100%;
         background-color: #007bff;
         color: white;
@@ -63,66 +62,69 @@ header {
     }
 }
 
-
+/* 🎯 Container principal que agrupa sidebar e main */
 .container {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 180px); /* opcional para limitar altura */
-    box-sizing: border-box;
+    display: flex;                  /* Layout flexível, lado a lado */
+    width: 100%;                    /* Ocupa toda a largura da tela */
+    height: calc(100vh - 180px);    /* Altura ajustada menos altura de header, nav e footer */
+    box-sizing: border-box;         /* Inclui padding e border no cálculo de width/height */
 }
 
+/* 🎯 Barra lateral (sidebar) */
 .sidebar {
-    width: 300px;
-    min-width: 250px;
-    max-width: 350px;
-    background-color: #f0f0f0;
-    padding: 1em;
-    box-sizing: border-box;
-    flex-shrink: 0; /* 🔥 Impede que a sidebar diminua */
+    width: 400px;                   /* Largura padrão */
+    min-width: 250px;               /* 🔥 Nunca fica menor que 250px */
+    max-width: 400px;               /* 🔥 Nunca fica maior que 350px */
+    background-color: #f0f0f0;      /* Fundo cinza claro */
+    padding: 1em;                   /* Espaçamento interno */
+    box-sizing: border-box;         /* Inclui padding no cálculo da largura */
+    flex-shrink: 0;                 /* 🔥 Impede que diminua ao redimensionar */
 }
 
+/* 🎯 Classe hidden permite recolher o menu (transform no desktop) */
 .sidebar.hidden {
-    transform: translateX(-100%);
+    transform: translateX(-100%);   /* Move a sidebar para fora da tela pela esquerda */
 }
 
+/* 🎯 Conteúdo principal (main) */
 main {
-    flex: 1; /* 🔥 Ocupa todo o espaço restante */
-    padding: 20px;
-    background-color: white;
+    flex: 1;                        /* 🔥 Ocupa todo o espaço restante */
+    padding: 20px;                  /* Espaçamento interno */
+    background-color: white;        /* Fundo branco */
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: auto;               /* Permite rolar se o conteúdo for muito longo */
 }
 
-/* Footer */
+/* 🎯 Rodapé fixo */
 footer {
     text-align: center;
     font-size: smaller;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #333;         /* Fundo preto */
+    color: white;                   /* Texto branco */
     width: 100%;
-    position: fixed;
+    position: fixed;                /* 🔥 Fixo na parte inferior */
     bottom: 0;
 }
 
-/* 🔥 Responsivo - Mobile */
+/* 🔥 Responsividade para telas pequenas (mobile) */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column;     /* 🔥 Sidebar fica acima do main no mobile */
     }
 
     .menu-toggle {
-        display: block;
+        display: block;             /* 🔥 Mostra botão de menu */
         width: 100%;
     }
 
     .sidebar {
-        width: 100%;
-        transform: translateY(0);
+        width: 100%;                /* Sidebar ocupa toda a largura no mobile */
+        transform: translateY(0);    /* Garante que ela apareça na posição correta */
     }
 
     .sidebar.hidden {
-        display: none;
+        display: none;              /* 🔥 Quando escondida no mobile, some completamente */
     }
 
     main {
@@ -130,8 +132,8 @@ footer {
     }
 }
 
-/* Parágrafos */
+/* 🎯 Formatação dos parágrafos */
 p {
-    text-align: justify;
-    text-indent: 0.5cm;
+    text-align: justify;            /* Texto justificado */
+    text-indent: 0.5cm;             /* 🔥 Recuo na primeira linha */
 }

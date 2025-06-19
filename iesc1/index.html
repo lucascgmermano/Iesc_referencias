@@ -1,30 +1,55 @@
 <!DOCTYPE html>
+<!-- 🔥 Declaração do tipo de documento, define como HTML5 -->
+
 <html lang="pt-br">
+<!-- 🔥 Início do documento HTML, com idioma definido como português do Brasil -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- 🔥 Define a codificação de caracteres como UTF-8 (suporta acentos, cedilha etc.) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 🔥 Torna a página responsiva, ajustando a largura para dispositivos móveis e definindo zoom inicial em 100% -->
+
     <title>IESC I</title>
+    <!-- 🔥 Título que aparece na aba do navegador -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- 🔥 Link externo que importa o arquivo CSS (estilos) -->
 </head>
+
 <body>
+<!-- 🔥 Início do corpo da página, onde aparece o conteúdo visual -->
 
 <header>
+    <!-- 🔥 Cabeçalho da página -->
     <h1>Central de Referências</h1>
+    <!-- 🔥 Título principal (nível 1) -->
     <h4>IESC I</h4>
+    <!-- 🔥 Subtítulo (nível 4), identifica qual módulo está aberto -->
 </header>
 
 <nav class="top-nav">
+    <!-- 🔥 Barra de navegação superior -->
     <a href="../index.html">Início</a>
+    <!-- 🔗 Link para a página inicial (uma pasta acima) -->
     <a href="../iesc2/index.html">IESC II</a>
+    <!-- 🔗 Link para a página do IESC II -->
     <a href="../iesc3/index.html">IESC III</a>
+    <!-- 🔗 Link para a página do IESC III -->
 </nav>
 
-<!-- 🔥 Botão para abrir/fechar a sidebar -->
+<!-- 🔥 Botão do tipo “menu hambúrguer” que aparece no mobile e desktop para abrir/fechar o menu lateral -->
 <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+<!-- 🔘 Chama a função JavaScript toggleMenu() para mostrar/ocultar a sidebar -->
 
 <div class="container">
+    <!-- 🔥 Container principal que engloba a sidebar (menu lateral) e o main (conteúdo) -->
+
     <aside class="sidebar">
+        <!-- 🔥 Menu lateral (sidebar) com uma lista ordenada de tópicos -->
         <ol>
+            <!-- 🔥 Lista ordenada com os temas -->
             <li><a href="#" onclick="loadContent('topico1.html')">História da Saúde Pública no Brasil</a></li>
             <li><a href="#" onclick="loadContent('topico2.html')">Sistema Único de Saúde</a></li>
             <li><a href="#" onclick="loadContent('topico3.html')">Sistemas Nacionais de Saúde</a></li>
@@ -36,18 +61,24 @@
             <li><a href="#" onclick="loadContent('topico9.html')">Visita Domiciliar</a></li>
             <li><a href="#" onclick="loadContent('topico10.html')">Promoção e Prevenção</a></li>
             <li><a href="#" onclick="loadContent('topico11.html')">Educação em Saúde</a></li>
+            <!-- 🔗 Cada link chama a função loadContent('arquivo.html') que carrega o conteúdo correspondente no <main> -->
         </ol>
     </aside>
 
     <main id="content">
-        <p>Selecione um tópico na barra lateral para começar.</p>
+        <!-- 🔥 Área de conteúdo principal -->
+        <p>Selecione um tópico para começar.</p>
+        <!-- 🔥 Mensagem inicial que aparece antes de escolher um tópico -->
     </main>
 </div>
 
 <footer>
+    <!-- 🔥 Rodapé fixo na parte inferior da página -->
     Desenvolvido por Lucas Coraça Germano. Última atualização: 30/05/2025.
 </footer>
 
 <script src="script.js"></script>
+<!-- 🔥 Importa o arquivo JavaScript que contém as funções toggleMenu() e loadContent() -->
 </body>
 </html>
+<!-- 🔥 Fim do documento HTML -->
