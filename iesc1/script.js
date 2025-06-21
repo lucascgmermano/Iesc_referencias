@@ -29,3 +29,7 @@ function loadContent(page) {
             console.error(error); // 🔍 Mostra o erro no console para depuração
         });
 }
+
+// Função para carregar data da ultima atualização do arquivo .html
+document.getElementById("dataAtualizacao").innerText =  // Seleciona o elemento HTML que possui o ID 'dataAtualizacao'
+    new Date(document.lastModified).toLocaleDateString('pt-BR'); // Insere a data do ultimo save do documento

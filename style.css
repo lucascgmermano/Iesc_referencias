@@ -33,6 +33,13 @@ header {
     background-color: #0056b3;
 }
 
+.top-nav a.active {
+    background-color: #003d80; /* Cor diferente do normal */
+    color: #ffffff;            /* Texto branco (ou ajuste como quiser) */
+    font-weight: bold;         /* Opcional, negrito para destacar */
+    border-bottom: 3px solid yellowgreen; /* Opcional, linha inferior de destaque */
+}
+
 .container {
     display: flex;
     max-width: 1200px;
@@ -56,12 +63,6 @@ main {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* Responsivo - Telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Sidebar sobe e vira barra acima do main */
-  }
 
 footer {
     text-align: center; 

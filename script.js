@@ -16,3 +16,6 @@ function loadContent(page) {
         });
 }
 
+// Função para carregar data da ultima atualização do arquivo .html
+document.getElementById("dataAtualizacao").innerText = 
+    new Date(document.lastModified).toLocaleDateString('pt-BR');
