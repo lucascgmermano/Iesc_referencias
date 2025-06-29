@@ -86,6 +86,7 @@ header {
     padding: 1em;                   /* Espaçamento interno */
     box-sizing: border-box;         /* Inclui padding no cálculo da largura */
     flex-shrink: 0;                 /* 🔥 Impede que diminua ao redimensionar */
+    overflow-y: auto;               /* Permite rolar se o conteúdo for muito longo */
 }
 
 /* 🎯 Classe hidden permite recolher o menu (transform no desktop) */
