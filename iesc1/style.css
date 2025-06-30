@@ -145,3 +145,12 @@ p {
     text-align: justify;            /* Texto justificado */
     text-indent: 0.5cm;             /* 🔥 Recuo na primeira linha */
 }
+
+/* Formatação dos títulos */
+h1, h2, h3, h4 {
+    font-size: medium;               /* Tamanho médio para os títulos */
+    font-weight: bold;               /* Negrito para os títulos */
+    color: #333;                    /* Cor escura para os títulos */
+    margin-top: 1em;                /* Espaço acima dos títulos */
+    margin-bottom: 0.5em;           /* Espaço abaixo dos títulos */
+}
