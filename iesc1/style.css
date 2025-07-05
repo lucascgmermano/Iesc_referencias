@@ -161,3 +161,11 @@ h1, h2, h3, h4 {
     margin-top: 1em;                /* Espaço acima dos títulos */
     margin-bottom: 0.5em;           /* Espaço abaixo dos títulos */
 }
+
+/* Leitura de texto */
+.leitor-controles {
+  margin-top: 1em;
+  display: flex;               /* ativa flexbox */
+  justify-content: center;     /* centraliza horizontalmente */
+  flex-wrap: wrap;             /* permite quebra de linha se a tela for pequena */
+  gap: 0.5em;              /* espaçamento entre os botões */

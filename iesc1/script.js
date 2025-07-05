@@ -33,3 +33,24 @@ function loadContent(page) {
 // Função para carregar data da ultima atualização do arquivo .html
 document.getElementById("dataAtualizacao").innerText =  // Seleciona o elemento HTML que possui o ID 'dataAtualizacao'
     new Date(document.lastModified).toLocaleDateString('pt-BR'); // Insere a data do ultimo save do documento
+
+
+// Função para ler o texto do conteúdo do topico\\
+function lerTexto() {
+  const texto = document.getElementById("conteudo-topico").innerText;
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = "pt-BR";
+  window.speechSynthesis.speak(utterance);
+}
+
+function pausarLeitura() {
+  window.speechSynthesis.pause();
+}
+
+function retomarLeitura() {
+  window.speechSynthesis.resume();
+}
+
+function pararLeitura() {
+  window.speechSynthesis.cancel();
+}
