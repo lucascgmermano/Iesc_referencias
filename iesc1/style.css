@@ -21,6 +21,7 @@ header h1 {
     text-align: center;
 }
 
+
 /* 🎯 Barra de navegação superior */
 .top-nav {
     display: flex;                  /* Flexbox para alinhar itens na horizontal */
